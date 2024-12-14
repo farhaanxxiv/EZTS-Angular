@@ -1,28 +1,29 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { RankByPipe } from '../pipes/RankByCollege';
+import { RankByCollegePipe } from '../pipes/RankByCollege';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'college-rankby',
   templateUrl: 'college-rankby.component.html',
-  imports: [RankByPipe, FormsModule]
+  imports: [RankByCollegePipe, FormsModule],
+  providers: [RankByCollegePipe]
 })
 
 export class CollegeRankbyComponent implements OnInit {
 
   filterBy = 'count'
 
-  filteredData = []
+  filteredData: any = []
 
 
-  constructor() { }
+  constructor(private rankByPipe: RankByCollegePipe) { }
 
   ngOnInit() {
-    this.filteredData = this.allColleges
+    this.filteredData = this.rankByPipe.transform([...this.allColleges], this.filterBy);
   }
 
-  onFilterByChange(event: any) {  
-    console.log(event)
+  onFilterByChange(value: any) {
+    this.filteredData = this.rankByPipe.transform(this.filteredData, value);
   }
 
   @Input() allColleges: any;

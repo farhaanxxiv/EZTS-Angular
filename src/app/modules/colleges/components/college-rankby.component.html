@@ -1,9 +1,9 @@
-<select  [(ngModel)]="filterBy" (ngModelChange)="onFilterByChange($event)">
+<select  [(ngModel)]="filterBy" (ngModelChange)="onFilterByChange(filterBy)">
     <option value="count">Student Count</option>
     <option value="performance">Student Performance</option>
 </select>
 
-@for (college of allColleges;track college.collegeId){
+@for (college of filteredData;track college.collegeId){
 <div class="rankby-row">
     <p>
         {{college.collegeName}}

@@ -2,8 +2,27 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border-right: 1px solid gray;
+    height: 100%;
+    padding: 1rem;
 
     * {
         display: block;
+    }
+
+    .card {
+        i {
+            font-size: 2rem;
+            margin: 0 auto;
+            width: fit-content;
+        }
+
+        a {
+            margin-top: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
     }
 }
