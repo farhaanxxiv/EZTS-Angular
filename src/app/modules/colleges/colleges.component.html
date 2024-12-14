@@ -1,0 +1,10 @@
+<h1>Colleges Component</h1>
+
+<h2>All Colleges</h2>
+
+@for(college of allColleges; track college.collegeId ){
+<p>{{college.collegeName}}</p>
+}
+
+<h2>Ranked By Students List</h2>
+<college-rankby [allColleges]="allColleges"></college-rankby>

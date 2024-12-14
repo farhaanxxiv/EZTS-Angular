@@ -1,0 +1,74 @@
+[
+  {
+    "collegeId": 1,
+    "collegeName": "Marquardt Group",
+    "location": "Port Sadyeshire",
+    "students": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "collegeId": 2,
+    "collegeName": "Swaniawski, Krajcik and Johns",
+    "location": "East Jerroldtown",
+    "students": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "collegeId": 3,
+    "collegeName": "Pollich - Littel",
+    "location": "East Houston",
+    "students": [
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  {
+    "collegeId": 4,
+    "collegeName": "Daniel - Kutch",
+    "location": "Fort Kellie",
+    "students": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  },
+  {
+    "collegeId": 5,
+    "collegeName": "Nolan Inc",
+    "location": "South Rociocester",
+    "students": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ]
+  }
+]

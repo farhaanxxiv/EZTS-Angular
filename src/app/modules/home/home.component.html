@@ -1,0 +1,11 @@
+<h1>Home Component</h1>
+
+@defer{
+
+@for (student of data; track student.studentId){
+<p>{{student.name}}</p>
+}
+
+}@loading {
+<h1>Loading...</h1>
+}

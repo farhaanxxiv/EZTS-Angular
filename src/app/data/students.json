@@ -1,0 +1,1038 @@
+[
+  {
+    "studentId": 1,
+    "name": "Angel Schaden",
+    "collegeId": 1,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 39
+      },
+      {
+        "examId": 2,
+        "score": 14
+      },
+      {
+        "examId": 3,
+        "score": 69
+      },
+      {
+        "examId": 4,
+        "score": 23
+      },
+      {
+        "examId": 5,
+        "score": 32
+      }
+    ]
+  },
+  {
+    "studentId": 2,
+    "name": "Harry Sawayn II",
+    "collegeId": 1,
+    "year": 2,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 8
+      },
+      {
+        "examId": 2,
+        "score": 37
+      },
+      {
+        "examId": 3,
+        "score": 4
+      },
+      {
+        "examId": 4,
+        "score": 21
+      },
+      {
+        "examId": 5,
+        "score": 63
+      }
+    ]
+  },
+  {
+    "studentId": 3,
+    "name": "Van Kertzmann",
+    "collegeId": 1,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 65
+      },
+      {
+        "examId": 2,
+        "score": 96
+      },
+      {
+        "examId": 3,
+        "score": 1
+      },
+      {
+        "examId": 4,
+        "score": 6
+      },
+      {
+        "examId": 5,
+        "score": 28
+      }
+    ]
+  },
+  {
+    "studentId": 4,
+    "name": "Mr. Jack Hettinger",
+    "collegeId": 1,
+    "year": 3,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 97
+      },
+      {
+        "examId": 2,
+        "score": 75
+      },
+      {
+        "examId": 3,
+        "score": 59
+      },
+      {
+        "examId": 4,
+        "score": 4
+      },
+      {
+        "examId": 5,
+        "score": 73
+      }
+    ]
+  },
+  {
+    "studentId": 5,
+    "name": "Seth Stanton",
+    "collegeId": 1,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 12
+      },
+      {
+        "examId": 2,
+        "score": 58
+      },
+      {
+        "examId": 3,
+        "score": 58
+      },
+      {
+        "examId": 4,
+        "score": 58
+      },
+      {
+        "examId": 5,
+        "score": 8
+      }
+    ]
+  },
+  {
+    "studentId": 6,
+    "name": "Lela Hoeger",
+    "collegeId": 1,
+    "year": 4,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 6
+      },
+      {
+        "examId": 2,
+        "score": 20
+      },
+      {
+        "examId": 3,
+        "score": 84
+      },
+      {
+        "examId": 4,
+        "score": 24
+      },
+      {
+        "examId": 5,
+        "score": 15
+      }
+    ]
+  },
+  {
+    "studentId": 7,
+    "name": "Melba Schamberger",
+    "collegeId": 1,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 35
+      },
+      {
+        "examId": 2,
+        "score": 92
+      },
+      {
+        "examId": 3,
+        "score": 54
+      },
+      {
+        "examId": 4,
+        "score": 12
+      },
+      {
+        "examId": 5,
+        "score": 20
+      }
+    ]
+  },
+  {
+    "studentId": 8,
+    "name": "Faye Schinner-Gibson",
+    "collegeId": 2,
+    "year": 4,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 45
+      },
+      {
+        "examId": 2,
+        "score": 90
+      },
+      {
+        "examId": 3,
+        "score": 48
+      },
+      {
+        "examId": 4,
+        "score": 16
+      },
+      {
+        "examId": 5,
+        "score": 90
+      }
+    ]
+  },
+  {
+    "studentId": 9,
+    "name": "Dr. Dale Ebert",
+    "collegeId": 2,
+    "year": 3,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 79
+      },
+      {
+        "examId": 2,
+        "score": 78
+      },
+      {
+        "examId": 3,
+        "score": 2
+      },
+      {
+        "examId": 4,
+        "score": 8
+      },
+      {
+        "examId": 5,
+        "score": 90
+      }
+    ]
+  },
+  {
+    "studentId": 10,
+    "name": "Ignacio Moen",
+    "collegeId": 2,
+    "year": 4,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 10
+      },
+      {
+        "examId": 2,
+        "score": 71
+      },
+      {
+        "examId": 3,
+        "score": 16
+      },
+      {
+        "examId": 4,
+        "score": 49
+      },
+      {
+        "examId": 5,
+        "score": 35
+      }
+    ]
+  },
+  {
+    "studentId": 11,
+    "name": "Mr. Barry Dicki",
+    "collegeId": 2,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 6
+      },
+      {
+        "examId": 2,
+        "score": 37
+      },
+      {
+        "examId": 3,
+        "score": 15
+      },
+      {
+        "examId": 4,
+        "score": 95
+      },
+      {
+        "examId": 5,
+        "score": 2
+      }
+    ]
+  },
+  {
+    "studentId": 12,
+    "name": "Mr. Antonio Weber",
+    "collegeId": 2,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 71
+      },
+      {
+        "examId": 2,
+        "score": 52
+      },
+      {
+        "examId": 3,
+        "score": 100
+      },
+      {
+        "examId": 4,
+        "score": 47
+      },
+      {
+        "examId": 5,
+        "score": 6
+      }
+    ]
+  },
+  {
+    "studentId": 13,
+    "name": "Mr. Dan Barrows",
+    "collegeId": 2,
+    "year": 3,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 38
+      },
+      {
+        "examId": 2,
+        "score": 77
+      },
+      {
+        "examId": 3,
+        "score": 21
+      },
+      {
+        "examId": 4,
+        "score": 33
+      },
+      {
+        "examId": 5,
+        "score": 91
+      }
+    ]
+  },
+  {
+    "studentId": 14,
+    "name": "Brandi Douglas PhD",
+    "collegeId": 2,
+    "year": 4,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 66
+      },
+      {
+        "examId": 2,
+        "score": 89
+      },
+      {
+        "examId": 3,
+        "score": 22
+      },
+      {
+        "examId": 4,
+        "score": 22
+      },
+      {
+        "examId": 5,
+        "score": 26
+      }
+    ]
+  },
+  {
+    "studentId": 15,
+    "name": "Fannie Williamson",
+    "collegeId": 2,
+    "year": 2,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 43
+      },
+      {
+        "examId": 2,
+        "score": 55
+      },
+      {
+        "examId": 3,
+        "score": 63
+      },
+      {
+        "examId": 4,
+        "score": 15
+      },
+      {
+        "examId": 5,
+        "score": 41
+      }
+    ]
+  },
+  {
+    "studentId": 16,
+    "name": "Candice Kohler",
+    "collegeId": 3,
+    "year": 4,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 55
+      },
+      {
+        "examId": 2,
+        "score": 47
+      },
+      {
+        "examId": 3,
+        "score": 67
+      },
+      {
+        "examId": 4,
+        "score": 2
+      },
+      {
+        "examId": 5,
+        "score": 70
+      }
+    ]
+  },
+  {
+    "studentId": 17,
+    "name": "Jason Corwin Jr.",
+    "collegeId": 3,
+    "year": 4,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 83
+      },
+      {
+        "examId": 2,
+        "score": 55
+      },
+      {
+        "examId": 3,
+        "score": 72
+      },
+      {
+        "examId": 4,
+        "score": 8
+      },
+      {
+        "examId": 5,
+        "score": 43
+      }
+    ]
+  },
+  {
+    "studentId": 18,
+    "name": "Joy Goldner-Bauch Jr.",
+    "collegeId": 3,
+    "year": 2,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 51
+      },
+      {
+        "examId": 2,
+        "score": 11
+      },
+      {
+        "examId": 3,
+        "score": 94
+      },
+      {
+        "examId": 4,
+        "score": 40
+      },
+      {
+        "examId": 5,
+        "score": 74
+      }
+    ]
+  },
+  {
+    "studentId": 19,
+    "name": "Beulah Oberbrunner",
+    "collegeId": 3,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 28
+      },
+      {
+        "examId": 2,
+        "score": 67
+      },
+      {
+        "examId": 3,
+        "score": 39
+      },
+      {
+        "examId": 4,
+        "score": 42
+      },
+      {
+        "examId": 5,
+        "score": 27
+      }
+    ]
+  },
+  {
+    "studentId": 20,
+    "name": "Erin Robel",
+    "collegeId": 3,
+    "year": 2,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 0
+      },
+      {
+        "examId": 2,
+        "score": 82
+      },
+      {
+        "examId": 3,
+        "score": 74
+      },
+      {
+        "examId": 4,
+        "score": 24
+      },
+      {
+        "examId": 5,
+        "score": 84
+      }
+    ]
+  },
+  {
+    "studentId": 21,
+    "name": "Gladys Rath",
+    "collegeId": 4,
+    "year": 2,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 20
+      },
+      {
+        "examId": 2,
+        "score": 100
+      },
+      {
+        "examId": 3,
+        "score": 64
+      },
+      {
+        "examId": 4,
+        "score": 5
+      },
+      {
+        "examId": 5,
+        "score": 31
+      }
+    ]
+  },
+  {
+    "studentId": 22,
+    "name": "John Spinka",
+    "collegeId": 4,
+    "year": 3,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 50
+      },
+      {
+        "examId": 2,
+        "score": 37
+      },
+      {
+        "examId": 3,
+        "score": 41
+      },
+      {
+        "examId": 4,
+        "score": 76
+      },
+      {
+        "examId": 5,
+        "score": 56
+      }
+    ]
+  },
+  {
+    "studentId": 23,
+    "name": "Candace O'Kon",
+    "collegeId": 4,
+    "year": 2,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 86
+      },
+      {
+        "examId": 2,
+        "score": 76
+      },
+      {
+        "examId": 3,
+        "score": 38
+      },
+      {
+        "examId": 4,
+        "score": 70
+      },
+      {
+        "examId": 5,
+        "score": 42
+      }
+    ]
+  },
+  {
+    "studentId": 24,
+    "name": "Dave Grimes",
+    "collegeId": 4,
+    "year": 3,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 71
+      },
+      {
+        "examId": 2,
+        "score": 64
+      },
+      {
+        "examId": 3,
+        "score": 86
+      },
+      {
+        "examId": 4,
+        "score": 34
+      },
+      {
+        "examId": 5,
+        "score": 64
+      }
+    ]
+  },
+  {
+    "studentId": 25,
+    "name": "Dominic MacGyver",
+    "collegeId": 4,
+    "year": 2,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 51
+      },
+      {
+        "examId": 2,
+        "score": 28
+      },
+      {
+        "examId": 3,
+        "score": 28
+      },
+      {
+        "examId": 4,
+        "score": 53
+      },
+      {
+        "examId": 5,
+        "score": 65
+      }
+    ]
+  },
+  {
+    "studentId": 26,
+    "name": "Bryan O'Reilly",
+    "collegeId": 4,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 31
+      },
+      {
+        "examId": 2,
+        "score": 32
+      },
+      {
+        "examId": 3,
+        "score": 74
+      },
+      {
+        "examId": 4,
+        "score": 91
+      },
+      {
+        "examId": 5,
+        "score": 34
+      }
+    ]
+  },
+  {
+    "studentId": 27,
+    "name": "Dr. Johnathan Ratke",
+    "collegeId": 4,
+    "year": 3,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 92
+      },
+      {
+        "examId": 2,
+        "score": 93
+      },
+      {
+        "examId": 3,
+        "score": 37
+      },
+      {
+        "examId": 4,
+        "score": 42
+      },
+      {
+        "examId": 5,
+        "score": 37
+      }
+    ]
+  },
+  {
+    "studentId": 28,
+    "name": "Rosemary Wintheiser",
+    "collegeId": 4,
+    "year": 2,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 11
+      },
+      {
+        "examId": 2,
+        "score": 10
+      },
+      {
+        "examId": 3,
+        "score": 11
+      },
+      {
+        "examId": 4,
+        "score": 80
+      },
+      {
+        "examId": 5,
+        "score": 17
+      }
+    ]
+  },
+  {
+    "studentId": 29,
+    "name": "Natalie Walsh",
+    "collegeId": 4,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 56
+      },
+      {
+        "examId": 2,
+        "score": 56
+      },
+      {
+        "examId": 3,
+        "score": 35
+      },
+      {
+        "examId": 4,
+        "score": 41
+      },
+      {
+        "examId": 5,
+        "score": 53
+      }
+    ]
+  },
+  {
+    "studentId": 30,
+    "name": "Ms. Teresa Hermiston",
+    "collegeId": 4,
+    "year": 4,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 20
+      },
+      {
+        "examId": 2,
+        "score": 84
+      },
+      {
+        "examId": 3,
+        "score": 20
+      },
+      {
+        "examId": 4,
+        "score": 26
+      },
+      {
+        "examId": 5,
+        "score": 73
+      }
+    ]
+  },
+  {
+    "studentId": 31,
+    "name": "Raul Rolfson-Strosin",
+    "collegeId": 4,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 44
+      },
+      {
+        "examId": 2,
+        "score": 60
+      },
+      {
+        "examId": 3,
+        "score": 72
+      },
+      {
+        "examId": 4,
+        "score": 85
+      },
+      {
+        "examId": 5,
+        "score": 98
+      }
+    ]
+  },
+  {
+    "studentId": 32,
+    "name": "Merle Waelchi",
+    "collegeId": 5,
+    "year": 3,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 42
+      },
+      {
+        "examId": 2,
+        "score": 85
+      },
+      {
+        "examId": 3,
+        "score": 5
+      },
+      {
+        "examId": 4,
+        "score": 80
+      },
+      {
+        "examId": 5,
+        "score": 65
+      }
+    ]
+  },
+  {
+    "studentId": 33,
+    "name": "Delbert Renner",
+    "collegeId": 5,
+    "year": 2,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 90
+      },
+      {
+        "examId": 2,
+        "score": 47
+      },
+      {
+        "examId": 3,
+        "score": 80
+      },
+      {
+        "examId": 4,
+        "score": 91
+      },
+      {
+        "examId": 5,
+        "score": 78
+      }
+    ]
+  },
+  {
+    "studentId": 34,
+    "name": "Lauren Botsford",
+    "collegeId": 5,
+    "year": 4,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 71
+      },
+      {
+        "examId": 2,
+        "score": 46
+      },
+      {
+        "examId": 3,
+        "score": 33
+      },
+      {
+        "examId": 4,
+        "score": 86
+      },
+      {
+        "examId": 5,
+        "score": 22
+      }
+    ]
+  },
+  {
+    "studentId": 35,
+    "name": "Damon Fay",
+    "collegeId": 5,
+    "year": 4,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 10
+      },
+      {
+        "examId": 2,
+        "score": 80
+      },
+      {
+        "examId": 3,
+        "score": 74
+      },
+      {
+        "examId": 4,
+        "score": 52
+      },
+      {
+        "examId": 5,
+        "score": 54
+      }
+    ]
+  },
+  {
+    "studentId": 36,
+    "name": "Audrey Bayer",
+    "collegeId": 5,
+    "year": 1,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 81
+      },
+      {
+        "examId": 2,
+        "score": 68
+      },
+      {
+        "examId": 3,
+        "score": 33
+      },
+      {
+        "examId": 4,
+        "score": 69
+      },
+      {
+        "examId": 5,
+        "score": 7
+      }
+    ]
+  },
+  {
+    "studentId": 37,
+    "name": "Orlando Kris",
+    "collegeId": 5,
+    "year": 3,
+    "examResults": [
+      {
+        "examId": 1,
+        "score": 63
+      },
+      {
+        "examId": 2,
+        "score": 72
+      },
+      {
+        "examId": 3,
+        "score": 52
+      },
+      {
+        "examId": 4,
+        "score": 58
+      },
+      {
+        "examId": 5,
+        "score": 39
+      }
+    ]
+  }
+]
