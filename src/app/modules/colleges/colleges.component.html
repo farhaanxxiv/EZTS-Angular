@@ -1,10 +1,22 @@
 <h1>College Dashboard</h1>
 
-<h2>All Colleges</h2>
 
-@for(college of allColleges; track college.collegeId ){
-<p>{{college.collegeName}}</p>
-}
+<div class="colleges-container grid grid-cols-2 md:grid-cols-3 gap-4">
 
-<h2>Ranked By Students List</h2>
-<college-rankby [allColleges]="allColleges"></college-rankby>
+
+    <div class="clg-count analytics-card">
+        <p>{{allColleges.length}}</p>
+        <h6>Total Colleges</h6>
+    </div>
+    <div class="analytics-card col-span-2">
+
+        <h2>All Colleges</h2>
+
+        @for(college of allColleges; track college.collegeId ){
+        <p>{{college.collegeName}}</p>
+        }
+    </div>
+    <div class="analytics-card clg-rankby md:col-span-3">
+        <college-rankby [allColleges]="allColleges" [allExams]="allExams"></college-rankby>
+    </div>
+</div>

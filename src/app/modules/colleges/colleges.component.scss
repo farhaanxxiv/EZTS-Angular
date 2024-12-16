@@ -1,0 +1,21 @@
+.colleges-container {
+
+    .clg-count {
+
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        h6 {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+    }
+}

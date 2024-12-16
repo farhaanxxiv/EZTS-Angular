@@ -9,7 +9,7 @@ export class DataService {
   private colleges = require('../data/colleges.json');
   private examResults = require('../data/examResults.json');
 
-  constructor() {}
+  constructor() { }
 
   getStudents() {
     return this.students;
@@ -26,4 +26,14 @@ export class DataService {
   getExamResults() {
     return this.examResults;
   }
+
+  getExamById(examId: number) {
+    return this.exams.find((exam: any) => exam.examId === examId);
+  }
+
+  getStudentById(studentId: number) {
+
+    return this.students.find((student: any) => student.studentId === studentId);
+  }
+
 }

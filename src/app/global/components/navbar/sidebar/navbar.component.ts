@@ -1,24 +1,30 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';     
-import { Observable } from 'rxjs';
 import { SidebarService } from '../../../../services/SidebarService';
+import { Observable } from 'rxjs';
+
 
 @Component({
-    selector: 'sidebar',
-    templateUrl: 'sidebar.component.html',
-    styleUrls: ['sidebar.component.scss'],
-    imports: [RouterOutlet, RouterLink, CommonModule],
-    standalone: true
+    selector: 'navbar',
+    templateUrl: 'navbar.component.html',
+    styleUrls: ['navbar.component.scss'],
+    imports: [RouterOutlet, RouterLink],
 })
-export class SidebarComponent {
+
+export class NavbarComponent {
+
     sidebarOpen$: Observable<boolean>;
+
+
 
     constructor(private sidebarService: SidebarService) {
         this.sidebarOpen$ = this.sidebarService.sidebarOpen$;
-    }
 
+    }
     toggleSidebar() {
+        console.log(this.sidebarOpen$)
         this.sidebarService.toggleSidebar();
     }
+
 }

@@ -1,12 +1,38 @@
-<select  [(ngModel)]="filterBy" (ngModelChange)="onFilterByChange(filterBy)">
-    <option value="count">Student Count</option>
-    <option value="performance">Student Performance</option>
-</select>
+<div class="clg-rankby">
+    <h2 class="text-2xl font-bold">Sort Colleges By</h2>
 
-@for (college of filteredData;track college.collegeId){
-<div class="rankby-row">
-    <p>
-        {{college.collegeName}}
-    </p>
+    <div class="mt-2 space-y-3">
+        <select class="" [(ngModel)]="filterBy" (ngModelChange)="onFilterByChange(filterBy)">
+            <option value="count">Student Count</option>
+            <option value="performance">Student Performance</option>
+            <option value="participation">Participation Rate</option>
+
+        </select>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="text-left">College Name</th>
+                        <th class="text-center">{{
+                            filterBy === 'count' ?'Students' :
+                            filterBy === 'participation' ?'Participation Rate'
+                            : 'Avg Score' }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (college of collegesAndScores; track college.collegeId) {
+                    <tr>
+                        <td class="">{{ college.collegeName }}</td>
+                        <td class="text-center">
+                            {{
+                            filterBy === 'count' ?college.students.length :
+                            filterBy === 'participation' ?college.participationRate
+                            : college.averageScore}}
+                        </td>
+                    </tr>
+                    }
+                </tbody> 
+            </table>
+        </div>
+    </div>
 </div>
-}

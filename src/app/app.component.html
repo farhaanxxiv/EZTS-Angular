@@ -1,6 +1,9 @@
-<div class="app-grid-container">
+<navbar></navbar>
+<sidebar></sidebar>
+
+<div [ngClass]="{' blur-sm md:blur-none': sidebarOpen$ | async, '': !(sidebarOpen$ | async)}" class=" mt-20 transition-all px-4 md:pl-[5.5rem] ">
+
   <div>
-    <sidebar></sidebar>
   </div>
   <div>
     <router-outlet />

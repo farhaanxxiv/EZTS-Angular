@@ -1,12 +1,28 @@
-<div class="sidebar-container">
+<div [ngClass]="{' left-0': sidebarOpen$ | async, '-left-full md:left-0': !(sidebarOpen$ | async)}" class="bg-black fixed top-0 !pt-16 sidebar-container transition-all z-[9990]">
     <div class="card">
-        <i class="pi pi-home"></i>
-        <a routerLink="/">Home</a>
+
+        <a (click)="toggleSidebar()" routerLink="/">
+            <i class="pi pi-home"></i>  
+            Home
+        </a>
     </div>
 
     <div class="card">
-        <i class="pi pi-building-column"></i>
-        <a routerLink="/colleges">Colleges</a>
+
+        <a (click)="toggleSidebar()" routerLink="/colleges">
+            <i class="pi pi-building-columns"></i>
+            Colleges
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <a (click)="toggleSidebar()" routerLink="/exams">
+            <i class="pi pi-pencil"></i>
+            Exams
+        </a>
+
     </div>
 
 </div>

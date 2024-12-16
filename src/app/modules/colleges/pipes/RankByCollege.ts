@@ -6,25 +6,19 @@ import { filter } from 'rxjs';
 })
 export class RankByCollegePipe implements PipeTransform {
 
-  transform(colleges: any[], filterBy: string): any[] {
-    if (!colleges || !filterBy) {
+  transform(colleges: any[]): any[] {
+    if (!colleges) {
       return colleges;
     }
 
-    if (filterBy === 'count') {
-      return colleges.sort((a, b) => {
-        const aStudentCount = a.students.length;
-        const bStudentCount = b.students.length;
-        return bStudentCount - aStudentCount;
-      });
-    } else {
-      return colleges.sort((a, b) => {
-        const aStudentCount = a.students.length;
-        const bStudentCount = b.students.length;
-        return aStudentCount - bStudentCount;
-      });
-    }
+    return colleges.sort((a, b) => {
+      const aStudentCount = a.students.length;
+      const bStudentCount = b.students.length;
+      return bStudentCount - aStudentCount;
+    });
+
 
 
   }
+
 }
