@@ -1,0 +1,30 @@
+<h1 class="text-xl md:text-3xl font-bold">Forms</h1>
+
+<div class="grid grid-cols-2">
+    <div class="analytics-card black">
+        <div class="w-full space-y-2">
+            <div class="flex justify-between">
+                <p class="">Male</p>
+                <p class="">{{ calculatePercentage(genderCount.male) }}%</p>
+            </div>
+            <div class="flex-grow bg-gray-200 rounded-full h-4 overflow-hidden">
+                <div class="bg-blue-600 h-full" [style.width.%]="calculatePercentage(genderCount.male)"></div>
+            </div>
+            <div class="flex justify-between">
+                <p class="">Female</p>
+                <p class="">{{ calculatePercentage(genderCount.female) }}%</p>
+            </div>
+            <div class="flex-grow bg-gray-200 rounded-full h-4 overflow-hidden">
+                <div class="bg-pink-400 h-full" [style.width.%]="calculatePercentage(genderCount.female)"></div>
+            </div>
+
+            <div class="flex justify-between">
+                <p class="">Other</p>
+                <p class="">{{ calculatePercentage(genderCount.other) }}%</p>
+            </div>
+            <div class="flex-grow bg-gray-200 rounded-full h-4 overflow-hidden">
+                <div class="bg-green-400 h-full" [style.width.%]="calculatePercentage(genderCount.other)"></div>
+            </div>
+        </div>
+    </div>
+</div>

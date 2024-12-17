@@ -8,6 +8,7 @@ export class DataService {
   private exams = require('../data/exams.json');
   private colleges = require('../data/colleges.json');
   private examResults = require('../data/examResults.json');
+  private formsResults = require('../data/forms.json');
 
   constructor() { }
 
@@ -17,6 +18,10 @@ export class DataService {
 
   getExams() {
     return this.exams;
+  }
+
+  getForms() {
+    return this.formsResults;
   }
 
   getColleges() {

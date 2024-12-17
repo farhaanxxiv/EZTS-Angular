@@ -5,6 +5,8 @@ import { Student } from '../../../models/Student';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { BaseChartDirective } from 'ng2-charts';
+import { ChartConfiguration, ChartType, ChartEvent } from 'chart.js';
 
 export interface Exams {
     examId: number;
@@ -24,9 +26,9 @@ export interface Participants {
     selector: 'app-exam-info',
     templateUrl: 'examInfo.component.html',
     standalone: true,
-    imports: [FormsModule, CommonModule]
+    imports: [FormsModule, CommonModule, BaseChartDirective]
 })
-export class ExamInfoComponent implements OnInit {
+export class ExamInfoComponent implements OnInit, OnDestroy {
 
     private routeSubscription: Subscription | null = null;
 
@@ -34,6 +36,44 @@ export class ExamInfoComponent implements OnInit {
     examInfo: Exams | null = null;
     filteredParticipants: Participants[] = [];
     qualifiedOnly = false;
+    qualifiedCount: number = 0;
+    scoreRanges = [
+        { min: 0, max: 20, label: '0-20' },
+        { min: 21, max: 40, label: '21-40' },
+        { min: 41, max: 60, label: '41-60' },
+        { min: 61, max: 80, label: '61-80' },
+        { min: 81, max: 100, label: '81-100' }
+    ];
+
+    // Chart properties
+    public barChartType: ChartType = 'bar';
+    public barChartData: ChartConfiguration['data'] = {
+        datasets: [{
+            data: [],
+            label: 'Score Distribution',
+            backgroundColor: ["black"],
+            hoverBackgroundColor: ["#505050"],
+        }],
+        labels: []
+    };
+
+    public barChartOptions: ChartConfiguration['options'] = {
+        responsive: true,
+        scales: {
+            y: {
+                title: {
+                    display: true,
+                    text: 'Number of Students'
+                }
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Scores Obtained'
+                }
+            }
+        },
+    };
 
     constructor(
         private route: ActivatedRoute,
@@ -51,13 +91,18 @@ export class ExamInfoComponent implements OnInit {
         });
     }
 
+    ngOnDestroy(): void {
+        if (this.routeSubscription) {
+            this.routeSubscription.unsubscribe();
+        }
+    }
+
     private loadExamInfo(): void {
         if (this.examId === null) return;
 
         this.examInfo = this.dataService.getExamById(this.examId);
 
         if (this.examInfo) {
-
             this.examInfo.participants.sort((a, b) => a.studentId - b.studentId);
 
             this.examInfo.participants.forEach(participant => {
@@ -65,7 +110,60 @@ export class ExamInfoComponent implements OnInit {
             });
 
             this.filteredParticipants = this.examInfo.participants;
+            this.qualifiedCount = this.calculateQualifiedCount();
+
+            // Calculate score distribution
+            this.calculateScoreDistribution();
         }
+    }
+
+    private calculateScoreDistribution(): void {
+        if (!this.examInfo) return;
+
+        // Count students in each range
+        const distribution = this.scoreRanges.map(range => {
+            return this.examInfo!.participants.filter(p =>
+                p.score >= range.min && p.score <= range.max
+            ).length;
+        });
+
+        // Update chart data
+        this.barChartData = {
+            datasets: [{
+                data: distribution,
+                label: 'Number of Students',
+                backgroundColor: ["white"],
+                hoverBackgroundColor: ["#a0a0a0"],
+                
+            }],
+            labels: this.scoreRanges.map(r => r.label)
+        };
+    }
+
+    chartClicked(event: any): void {
+
+        this.qualifiedOnly = false;
+
+        const activeElements: any[] = event.active
+        // If no bar is clicked, reset to all participants
+        if (!activeElements || activeElements.length === 0) {
+            this.filteredParticipants = this.examInfo?.participants || [];
+            return;
+        }
+
+        // Get the index of the clicked bar
+        const clickedIndex = activeElements[0].index;
+
+        // Get the corresponding score range
+        const selectedRange = this.scoreRanges[clickedIndex];
+
+        // Filter participants based on the selected score range
+        this.filteredParticipants = this.examInfo?.participants.filter(participant =>
+            participant.score >= selectedRange.min &&
+            participant.score <= selectedRange.max
+        ) || [];
+
+
     }
 
     filterQualified(): void {

@@ -1,6 +1,10 @@
 <div class="analytics-card ">
 
+
+
     <h1 class="text-xl md:text-3xl font-bold">All Exams</h1>
+
+
     <div class="grid md:grid-cols-2 gap-4 mt-4">
         @for(exam of allExams; track exam.examId){
         <div class="bg-white p-3 rounded-lg">
@@ -11,7 +15,7 @@
                         {{exam.participants.length}}</p>
                 </div>
                 <a class="block h-fit my-auto" [routerLink]="['/exams', exam.examId]">
-                    <button class="text-xs md:text-base dark block my-auto">View Details</button>
+                    <button class="!text-sm md:text-base dark block my-auto">View Details</button>
                 </a>
             </div>
         </div>

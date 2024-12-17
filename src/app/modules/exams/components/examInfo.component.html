@@ -1,65 +1,74 @@
 @if(examInfo === null){
-    <p>No Exam Found</p>
-    }@else{
-    <div class="exam-details">
-        <h1 class="text-3xl md:text-5xl font-semibold">{{examInfo.examName}}</h1>
-    
-        <div class="grid grid-cols-2 gap-4 my-4">
-            <div class="analytics-card p-4 bg-gray-100 rounded">
+<p>No Exam Found</p>
+}@else{
+<div class="exam-details">
+    <h1 class="text-3xl md:text-5xl font-semibold">{{examInfo.examName}}</h1>
+
+    <div class="grid md:grid-cols-2 gap-x-8 gap-y-3  my-4">
+        <div class="grid grid-cols-2 gap-3 h-full">
+            <div class="analytics-card black md:col-span-1">
                 <p class="text-2xl md:text-4xl font-semibold">{{examInfo.cutoff}}</p>
                 <p class="text-sm md:text-lg">Exam Cutoff</p>
             </div>
-    
-            <div class="analytics-card p-4 bg-gray-100 rounded">
+
+
+            <div class="analytics-card black p-4 bg-gray-100 rounded md:col-span-1">
                 <p class="text-2xl md:text-4xl font-semibold">
                     {{examInfo.participants.length}}
                 </p>
                 <p class="text-sm md:text-lg">Students Attempted</p>
             </div>
+            <div class="analytics-card black col-span-2">
+                <p class="text-2xl md:text-4xl font-semibold">
+                    {{qualifiedCount}} / <span class="text-base md:!text-lg">{{examInfo.participants.length}}</span>
+                </p>
+                <p class="text-sm md:text-lg">Qualified Students</p>
+            </div>
         </div>
-    
-        <div class="flex items-center my-4">
-            <label class="flex items-center gap-2">
-                <input 
-                    type="checkbox" 
-                    [(ngModel)]="qualifiedOnly" 
-                    (ngModelChange)="filterQualified()"
-                    class=""
-                >
-                <span>Show Qualified Only</span>
-            </label>
-            <span class="ml-4 text-sm text-gray-600">
-                (Qualified: {{calculateQualifiedCount()}} / {{examInfo.participants.length}})
-            </span>
+
+        <div class="analytics-card black">
+            <h3 class="text-xl font-semibold mb-4">Score Distribution</h3>
+            <canvas baseChart [data]="barChartData" [options]="barChartOptions" [type]="barChartType"
+                (chartClick)="chartClicked($event)">
+            </canvas>
+            <p class="mt-4 text-xs  text-gray-300">*Click on a bar to filter the table below</p>
         </div>
-    
-        <table class="w-full border-collapse">
-            <thead >
-                <tr>
-                    <th class="p-2 border">Student Id</th>
-                    <th class="p-2 border">Name</th>
-                    <th class="p-2 border">Score</th>
-                    <th class="p-2 border">Qualified</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for(participant of filteredParticipants; track participant.studentId){
-                <tr class="">
-                    <td class="p-2 border text-center">
-                        {{participant.student.studentId}}
-                    </td>
-                    <td class="p-2 border">
-                        {{participant.student.name}}
-                    </td>
-                    <td class="p-2 border text-center">
-                        {{participant.score}} / {{examInfo.totalScore}}
-                    </td>
-                    <td class="p-2 border text-center">
-                        {{participant.score >= examInfo.cutoff ? "Yes" : "No"}}
-                    </td>
-                </tr>
-                }
-            </tbody>
-        </table>
     </div>
-    }
+
+
+    <h2 class="text-2xl font-medium mb-4 mt-12">Participants</h2>
+    <label class="block w-fit">
+        <input type="checkbox" [(ngModel)]="qualifiedOnly" (ngModelChange)="filterQualified()" class="">
+        <span>&nbsp;Show Qualified Only</span>
+    </label>
+
+    <table class="">
+        <thead>
+            <tr>
+                <th class="">Id</th>
+                <th class="">Name</th>
+                <th class="">Score</th>
+                <th class="">Qualified</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(participant of filteredParticipants; track participant.studentId){
+            <tr class="">
+                <td class="w-16 text-center">
+                    {{participant.student.studentId}}
+                </td>
+                <td class="">
+                    {{participant.student.name}}
+                </td>
+                <td class=" text-center">
+                    {{participant.score}} / {{examInfo.totalScore}}
+                </td>
+                <td class=" text-center">
+                    {{participant.score >= examInfo.cutoff ? "Yes" : "No"}}
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}

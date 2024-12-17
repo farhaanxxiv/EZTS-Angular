@@ -33,7 +33,20 @@ a {
 .analytics-card {
     background-color: var(--bg-gray);
     border-radius: 0.9rem;
-    padding: 10px;
+    padding: 2rem;
+
+    @media only screen and (max-width: 600px) {
+        padding: 1rem;
+
+    }
+
+    &.black {
+        background-color: #131313;
+
+        * {
+            color: white;
+        }
+    }
 
 }
 
@@ -75,10 +88,15 @@ button.dark:hover {
 
 table {
     border-collapse: collapse;
+    width: 100%;
 
     thead {
         background-color: var(--bg-gray);
 
+        th {
+            padding: 0.5rem;
+            border: 1px solid #eaeaea;
+        }
 
     }
 
@@ -86,12 +104,36 @@ table {
     tbody {
 
         tr {
+            background-color: white;
 
             &:hover {
-                background-color: ghostwhite;
+                background-color: #f0f0f0;
+            }
+
+            td {
+                padding: 0.5rem;
+                border: 1px solid #eaeaea;
             }
         }
     }
 
 
+}
+
+
+.sidebar-link {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.active-link {
+    background-color: white;
+    color: black !important;
+    transition: 0.2s;
+
+    * {
+        scale: 0.8;
+
+        color: black !important;
+    }
 }

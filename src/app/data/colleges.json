@@ -1,8 +1,8 @@
 [
   {
     "collegeId": 1,
-    "collegeName": "Marquardt Group",
-    "location": "Port Sadyeshire",
+    "collegeName": "Torphy LLC",
+    "location": "Elissaton",
     "students": [
       1,
       2,
@@ -10,65 +10,90 @@
       4,
       5,
       6,
-      7
-    ]
-  },
-  {
-    "collegeId": 2,
-    "collegeName": "Swaniawski, Krajcik and Johns",
-    "location": "East Jerroldtown",
-    "students": [
+      7,
       8,
       9,
       10,
       11,
-      12,
-      13,
-      14,
-      15
+      12
     ]
   },
   {
-    "collegeId": 3,
-    "collegeName": "Pollich - Littel",
-    "location": "East Houston",
+    "collegeId": 2,
+    "collegeName": "Schulist - Larkin",
+    "location": "North Caylacester",
     "students": [
+      13,
+      14,
+      15,
       16,
       17,
       18,
       19,
-      20
-    ]
-  },
-  {
-    "collegeId": 4,
-    "collegeName": "Daniel - Kutch",
-    "location": "Fort Kellie",
-    "students": [
+      20,
       21,
       22,
       23,
       24,
       25,
-      26,
+      26
+    ]
+  },
+  {
+    "collegeId": 3,
+    "collegeName": "Romaguera and Sons",
+    "location": "West Aidantown",
+    "students": [
       27,
       28,
       29,
       30,
-      31
-    ]
-  },
-  {
-    "collegeId": 5,
-    "collegeName": "Nolan Inc",
-    "location": "South Rociocester",
-    "students": [
+      31,
       32,
       33,
       34,
       35,
       36,
-      37
+      37,
+      38
+    ]
+  },
+  {
+    "collegeId": 4,
+    "collegeName": "Breitenberg LLC",
+    "location": "Port Susana",
+    "students": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51
+    ]
+  },
+  {
+    "collegeId": 5,
+    "collegeName": "Ondricka LLC",
+    "location": "Chayaville",
+    "students": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62
     ]
   }
 ]

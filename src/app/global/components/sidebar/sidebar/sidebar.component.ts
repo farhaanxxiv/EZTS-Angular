@@ -8,7 +8,7 @@ import { SidebarService } from '../../../../services/SidebarService';
     selector: 'sidebar',
     templateUrl: 'sidebar.component.html',
     styleUrls: ['sidebar.component.scss'],
-    imports: [RouterOutlet, RouterLink, CommonModule],
+    imports: [RouterOutlet, RouterLink, CommonModule, RouterLinkActive],
     standalone: true
 })
 export class SidebarComponent {
