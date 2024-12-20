@@ -1,7 +1,7 @@
 <navbar></navbar>
 <sidebar></sidebar>
 
-<div [ngClass]="{'': sidebarOpen$ | async, '': !(sidebarOpen$ | async)}" class=" mt-20 transition-all px-4 md:pl-[6.2rem] pb-8">
+<div [ngClass]="{'blur-sm md:blur-none': sidebarOpen$ | async, '': !(sidebarOpen$ | async)}" class=" mt-20 transition-all px-4 md:pl-[6.2rem] pb-8">
 
   <div>
   </div>
