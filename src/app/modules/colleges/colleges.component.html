@@ -2,19 +2,19 @@
 <div class="colleges-container grid grid-cols-2 md:grid-cols-3 gap-4">
 
 
-    <div class="clg-count analytics-card black">
+    <div class="clg-count analytics-card black col-span-2 md:col-span-1">
         <p>{{allColleges.length}}</p>
         <h6>Total Colleges</h6>
     </div>
     <div class="analytics-card col-span-2">
 
-        <h2>All Colleges</h2>
+        <h2 class="font-semibold text-xl">All Colleges</h2>
 
         @for(college of allColleges; track college.collegeId ){
         <p>{{college.collegeName}}</p>
         }
     </div>
-    <div class="analytics-card clg-rankby md:col-span-3">
+    <div class="analytics-card clg-rankby col-span-2 md:col-span-3">
         <college-rankby [allColleges]="allColleges" [allExams]="allExams"></college-rankby>
     </div>
 </div>

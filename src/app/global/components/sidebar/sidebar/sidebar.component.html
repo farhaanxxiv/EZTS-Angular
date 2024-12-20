@@ -1,12 +1,12 @@
 <div [ngClass]="{' left-0': sidebarOpen$ | async, '-left-full md:left-0': !(sidebarOpen$ | async)}"
     class="bg-black fixed top-0 !pt-16 sidebar-container transition-all z-[9990]">
-    <div class="card">
+    <!-- <div class="card">
         <a (click)="toggleSidebar()" routerLink="/" class="sidebar-link" routerLinkActive="active-link"
             [routerLinkActiveOptions]="{exact: true}">
             <i class="pi pi-home"></i>
             Home
         </a>
-    </div>
+    </div> -->
 
     <div class="card">
         <a (click)="toggleSidebar()" routerLink="/colleges" class="sidebar-link" routerLinkActive="active-link">
