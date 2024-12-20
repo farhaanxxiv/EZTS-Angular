@@ -120,14 +120,12 @@ export class ExamInfoComponent implements OnInit, OnDestroy {
     private calculateScoreDistribution(): void {
         if (!this.examInfo) return;
 
-        // Count students in each range
         const distribution = this.scoreRanges.map(range => {
             return this.examInfo!.participants.filter(p =>
                 p.score >= range.min && p.score <= range.max
             ).length;
         });
 
-        // Update chart data
         this.barChartData = {
             datasets: [{
                 data: distribution,
@@ -145,19 +143,16 @@ export class ExamInfoComponent implements OnInit, OnDestroy {
         this.qualifiedOnly = false;
 
         const activeElements: any[] = event.active
-        // If no bar is clicked, reset to all participants
+
         if (!activeElements || activeElements.length === 0) {
             this.filteredParticipants = this.examInfo?.participants || [];
             return;
         }
 
-        // Get the index of the clicked bar
         const clickedIndex = activeElements[0].index;
 
-        // Get the corresponding score range
         const selectedRange = this.scoreRanges[clickedIndex];
 
-        // Filter participants based on the selected score range
         this.filteredParticipants = this.examInfo?.participants.filter(participant =>
             participant.score >= selectedRange.min &&
             participant.score <= selectedRange.max

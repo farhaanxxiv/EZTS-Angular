@@ -49,10 +49,8 @@ export class CollegeRankbyComponent implements OnInit {
   }
 
   transformCollege(colleges: College[], exams: ExamResults[]): any[] {
-    // Create a map of student scores from the exams
     const studentScores = new Map();
 
-    // Populate studentScores with data from all exams
     exams.forEach((exam) => {
       exam.results.forEach(({ studentId, score }: any) => {
         if (!studentScores.has(studentId)) {
@@ -73,11 +71,8 @@ export class CollegeRankbyComponent implements OnInit {
   }
 
   calculateCollegePerformance(): void {
-    // Calculate performance for each college based on collegesAndScores
     const collegePerformance: any[] = this.collegesAndScores.map((college: CollegeScores) => {
-      // Calculate average score across all students in this college
       const studentScores = college.students.map(student => {
-        // Calculate average score for this student across all exams
         const totalScore = student.scores.reduce((sum, examScore) => {
           const score = typeof examScore.score === 'number'
             ? examScore.score
@@ -91,12 +86,10 @@ export class CollegeRankbyComponent implements OnInit {
         return averageStudentScore;
       });
 
-      // Calculate college's average score
       const collegeAverageScore = studentScores.length > 0
         ? Number((studentScores.reduce((sum, score) => sum + score, 0) / studentScores.length).toFixed(2))
         : 0;
 
-      // Calculate participation rate for the college
       const studentsWithScores = college.students.filter(student => student.scores.length > 0).length;
       const participationRate = college.students.length > 0
         ? ((studentsWithScores / college.students.length) * 100).toFixed(2)
@@ -108,11 +101,10 @@ export class CollegeRankbyComponent implements OnInit {
         location: college.location,
         students: college.students,
         averageScore: collegeAverageScore,
-        participationRate: participationRate, // Add participation rate here
+        participationRate: participationRate, 
       };
     });
 
-    // Sort colleges by average score in descending order (highest first)
     this.collegesAndScores = collegePerformance.sort((a, b) => b.averageScore - a.averageScore);
   }
 
