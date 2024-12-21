@@ -1,19 +1,24 @@
 <h1 class="text-xl md:text-3xl font-bold">Forms</h1>
 
-<div class="grid grid-cols-2">
-    <div class="analytics-card col-span-2 md:col-span-1 black">
+<div class="grid grid-cols-2 gap-y-8 gap-x-4">
+
+    <div class="h-fit analytics-card col-span-2 md:col-span-1 black">
         <div class="w-full space-y-2">
+
             <div class="flex justify-between">
                 <p class="">Male</p>
                 <p class="">{{ calculatePercentage(genderCount.male) }}%</p>
             </div>
+
             <div class="flex-grow bg-gray-200 rounded-full h-4 overflow-hidden">
                 <div class="bg-blue-600 h-full" [style.width.%]="calculatePercentage(genderCount.male)"></div>
             </div>
+
             <div class="flex justify-between">
                 <p class="">Female</p>
                 <p class="">{{ calculatePercentage(genderCount.female) }}%</p>
             </div>
+
             <div class="flex-grow bg-gray-200 rounded-full h-4 overflow-hidden">
                 <div class="bg-pink-400 h-full" [style.width.%]="calculatePercentage(genderCount.female)"></div>
             </div>
@@ -22,9 +27,211 @@
                 <p class="">Other</p>
                 <p class="">{{ calculatePercentage(genderCount.other) }}%</p>
             </div>
+
             <div class="flex-grow bg-gray-200 rounded-full h-4 overflow-hidden">
                 <div class="bg-green-400 h-full" [style.width.%]="calculatePercentage(genderCount.other)"></div>
             </div>
+
         </div>
+    </div>
+
+    <div class="analytics-card col-span-2 md:col-span-1 black">
+        <h2 class="font-semibold text-xl">Form Sample</h2>
+        <form class="flex flex-col gap-y-4 mt-4 " [formGroup]="leadForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label htmlFor="lead_name">
+                    Name
+                </label>
+
+                <input id="lead_name" type="text" formControlName="name" />
+                @if (isFieldTouched('name')) {
+                <div class="mt-1">
+                    @if (hasError('name', 'required')) {
+                    <p class="input-error">Name is required</p>
+                    }
+                    @if (hasError('name', 'minlength')) {
+                    <p class="input-error">
+                        Name must be at least {{ getMinLength('name') }} characters
+                    </p>
+                    }
+                    @if (hasError('name', 'pattern')) {
+                    <p class="input-error">
+                        Name can only contain letters and spaces
+                    </p>
+                    }
+                </div>
+                }
+            </div>
+            <div>
+                <label htmlFor="lead_password">
+                    Test Password
+                </label>
+
+                <input id="lead_password" type="password" formControlName="password" />
+                @if (isFieldTouched('password')) {
+                <div class="mt-1">
+                    @if (hasError('password', 'required')) {
+                    <p class="input-error">Password is required</p>
+                    }
+                    @if (hasError('password', 'minlength')) {
+                    <p class="input-error">
+                        Password must be at least {{ getMinLength('password') }} characters
+                    </p>
+                    }
+                </div>
+                }
+            </div>
+            <div>
+                <label htmlFor="lead_phone">
+                    Number
+                </label>
+
+
+                <input id="lead_phone" type="number" formControlName="phone" />
+
+                @if (isFieldTouched('phone')) {
+                <div class="mt-1">
+                    @if (hasError('phone', 'required')) {
+                    <p class="input-error">Password is required</p>
+                    }
+                    @if(leadForm.value.phone){
+
+                    @if (leadForm.value.phone < 1000000000 ) { <p class="input-error">
+                        Phone must be at least 10 digits
+                        </p>
+                        }
+                        @if (leadForm.value.phone > 9999999999 ) { <p class="input-error">
+                            Phone cant be greater than 10 digits
+                        </p>
+                        }
+                        }
+
+                </div>
+                }
+            </div>
+            <div>
+                <label htmlFor="lead_email">
+                    Email
+                </label>
+
+                <input id="lead_email" type="number" formControlName="email" />
+            </div>
+            <div>
+                <label>
+                    Gender
+                </label>
+
+                <div class="flex gap-x-1">
+                    <label class="!w-fit " htmlFor="lead_gender_male">
+                        <input class="!w-fit !inline" id="lead_gender_male" name="gender" value="male" type="radio"
+                            formControlName="gender" />
+                        Male
+                    </label>
+                </div>
+                <div class="flex gap-x-1">
+                    <label class="!w-fit " htmlFor="lead_gender_female">
+                        <input class="!w-fit !inline" id="lead_gender_female" name="gender" value="female" type="radio"
+                            formControlName="gender" />
+                        Female
+                    </label>
+
+                </div>
+                <div class="flex gap-x-1">
+                    <label class="!w-fit " htmlFor="lead_gender_other">
+                        <input class="!w-fit !inline" id="lead_gender_other" name="gender" value="other" type="radio"
+                            formControlName="gender" />
+                        Others
+                    </label>
+                </div>
+
+            </div>
+            <div>
+                <label htmlFor="lead_course">
+                    Which course do you prefer
+                </label>
+
+                <select id="lead_course" type="text" formControlName="course">
+                    <option value="" selected hidden>Select A Course</option>
+                    <option value="morning">MERN</option>
+                    <option value="afternoon">MEAN</option>
+                    <option value="evening">JAVA SPRING BOOT</option>
+
+                </select>
+            </div>
+
+
+
+            <div>
+                <label htmlFor="lead_knowledge">
+                    How good are you with course you selected? 0-100 (0-Beginner, 100-Experienced)
+                </label>
+
+                <input id="lead_knowledge" type="range" formControlName="knowledge">
+                <p>{{leadForm.value.knowledge}}%</p>
+            </div>
+
+            <div class="flex gap-x-1">
+                <label htmlFor="lead_student">
+
+                    <input class="!w-fit !inline" id="lead_student" type="checkbox" formControlName="student">
+
+                    Are you a student ?
+                </label>
+            </div>
+
+            <div class="">
+                <label htmlFor="lead_photo">
+                    Upload your photo
+
+                </label>
+
+                <input class="!w-fit !inline" id="lead_photo" type="file" formControlName="photo">
+
+            </div>
+            <div class="">
+                <label htmlFor="lead_ide">
+                    Which IDE do you prefer ?
+
+                </label>
+
+                <input formControlName="ide" list="lead_ide">
+                <datalist id="lead_ide">
+                    <option value="VS Code">
+                    <option value="XCode">
+                    <option value="Vim">
+                </datalist>
+            </div>
+
+            <div class="">
+
+                <label htmlFor="lead_date">
+                    Which Date are you willing to join?
+                </label>
+
+                <input [min]="minDate" id="lead_date" type="date">
+
+            </div>
+
+            <div class="">
+
+                <label htmlFor="lead_why">
+                    Why do you want to join?
+                </label>
+
+                <textarea rows="6" id="lead_why" formControlName="why">
+                    </textarea>
+
+            </div>
+
+
+
+            <button [disabled]="leadForm.invalid || isFormSubmitting" class="dark" type="submit">
+                @if (isFormSubmitting) {
+                <img class="invert block mx-auto w-6 h-6 animate-spin" src="/images/loading.png" />
+                }@else{
+                Submit
+                }
+            </button>
+        </form>
     </div>
 </div>

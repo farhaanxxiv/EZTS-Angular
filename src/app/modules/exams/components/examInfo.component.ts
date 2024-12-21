@@ -132,7 +132,7 @@ export class ExamInfoComponent implements OnInit, OnDestroy {
                 label: 'Number of Students',
                 backgroundColor: ["white"],
                 hoverBackgroundColor: ["#a0a0a0"],
-                
+
             }],
             labels: this.scoreRanges.map(r => r.label)
         };
